@@ -10,16 +10,26 @@
     555555555 
 */
 package main;
+
+/*import java.util.Scanner;*/
  
 public class Main {
 
 	public static void main(String[] args) {
 		int lines = 5;
-		for (int i = 0; i < lines; i++) {
-			for (int j = 0; j < i+1; j++) {
-				System.out.print(j);
-			}
-			System.out.println("");
+		int RowCount = 1;
+		for ( int i = lines; i > 0; i--)
+		{
+			for (int j = 1; j <= i; i++) 
+				{
+				
+					System.out.print(" ");
+				}
+				for (int j = 1; j<= RowCount; j++)
+				System.out.println(RowCount+"");
+			
+		System.out.println();
+		RowCount++;
 		}
 	}
 }
