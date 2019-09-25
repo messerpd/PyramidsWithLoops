@@ -1,8 +1,11 @@
 /*
+ * 9/25/2019
  * Paul Messerly
  * messerpd@ucmail.uc.edu
- * Printing pyramids using loops. It kind-of works. 
- * What I really want is
+ * IS4010 App Dev w/ Java
+ * Fall 2019
+ * Printing pyramids using loops. This program generates the below triangle
+ *  for lines = 1 through 9 (integers only) 
         1
        222
       33333
@@ -11,25 +14,25 @@
 */
 package main;
 
-/*import java.util.Scanner;*/
+/*import java.util.Scanner;*/ //potentially implement user input
  
 public class Main {
 
 	public static void main(String[] args) {
-		int lines = 5;
-		int RowCount = 1;
-		for ( int i = lines; i > 0; i--)
+		int lines = 5;			//input the height of the triangle
+		for ( int i = 1; i <= lines; i++) //loop through each ayer of the triangle
 		{
-			for (int j = 1; j <= i; i++) 
-				{
-				
-					System.out.print(" ");
-				}
-				for (int j = 1; j<= RowCount; j++)
-				System.out.println(RowCount+"");
-			
-		System.out.println();
-		RowCount++;
+			for (int k = lines-i; k>=0;k--) //print spaces before integer output
+			{
+				System.out.print(" ");
+			}
+			System.out.print(i);		//print the first integer on the line
+			for (int r = 1; r<=i*2-2;r++) //print the above integer i*2-2 times
+			{
+				System.out.print(i);
+			}
+			System.out.println("");		//Go to the next line of the pyramid
+		
 		}
 	}
 }
